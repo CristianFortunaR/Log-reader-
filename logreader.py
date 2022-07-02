@@ -138,16 +138,19 @@ elif option == 4:
             print(f"{tad} ,{prealm}, {word} Found in line {count}: {line}")
             result.write(f"{tad} ,{prealm}, {word} Found in line {count}: {line}")
         count += 1
-
-#count = 0
-#for line in lines:
- #   if timeAndDate == NULL:
-#      if prealm in line and word in line:
- #           print(f"{word} Found in line {count}: {line}")
-  #          result.write(f"{word} Found in line {count}: {line}")
-   #     count += 1
-    #else:  
-     #   if timeAndDate in line and prealm in line and word in line:
-      #      print(f"{word} Found in line {count}: {line}")
-       #     result.write(f"{word} Found in line {count}: {line}")
-   # count += 1
+elif option == 5:
+    debugg = input("Enter the option: 1.Info 2.Debug  > ")
+    if debugg == 1:
+        count = 0
+        for line in lines:
+            if 'Info' or 'INFO' or 'info' in line:
+                print(f"{debugg} found in line {count}: {line}")
+                result.write(f"Info found in line {count}: {line}")
+            count += 1
+    elif debugg == 2:
+        count = 0
+        for line in lines:
+            if 'Debug' or 'DEBUG' or 'debug' in line:
+                print(f"Debugg found in line {count}: {line}")
+                result.write(f"Debug found in line {count}: {line}")
+            count += 1
